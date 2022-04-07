@@ -14,7 +14,7 @@
 </head>
 </div>
 <div id="bak_0">
-	<div style="WIDTH: 100%; HEIGHT: 102px;background:url(https://zhz292.github.io/498.png);"><div style="width:100%;height:32px;line-height:32px;text-align:right"><a href="https://jksb.v.zzu.edu.cn/vls6sss/zzujksb.dll/logout?ptopid=s81E79D803FE3454B84AF7D5015F4DB63"><span style="color:#00c;">〖切换账号〗</span></a>　</div></div><div style="width:100%;height:7px;BACKGROUND-IMAGE: url(https://jksb.v.zzu.edu.cn/images/split5.png)"></div><div style="WIDTH: 100%; HEIGHT: 90px;"><div style="width:100%;height:32%;line-height:32px;text-align:left;"><span style="font-size:12px;color:#333;">获取时间：</span><span style="font-size:16px;color:#a0a;" id="datetimenow"></span><span style="font-size:12px;color:#333;">有效期剩余 </span><span id="tim317" style="font-size:22px;color:#c00;font-weight:500;font-family:黑体;">10分00秒</span></div><div style="width:100%;height:7px;BACKGROUND-IMAGE: url(https://jksb.v.zzu.edu.cn/images/split5.png)"></div>
+	<div id="num" style="WIDTH: 100%; HEIGHT: 102px;background:url(https://zhz292.github.io/498.png);"><div style="width:100%;height:32px;line-height:32px;text-align:right"><a href="https://jksb.v.zzu.edu.cn/vls6sss/zzujksb.dll/logout?ptopid=s81E79D803FE3454B84AF7D5015F4DB63"><span style="color:#00c;">〖切换账号〗</span></a>　</div></div><div style="width:100%;height:7px;BACKGROUND-IMAGE: url(https://jksb.v.zzu.edu.cn/images/split5.png)"></div><div style="WIDTH: 100%; HEIGHT: 90px;"><div style="width:100%;height:32%;line-height:32px;text-align:left;"><span style="font-size:12px;color:#333;">获取时间：</span><span style="font-size:16px;color:#a0a;" id="datetimenow"></span><span style="font-size:12px;color:#333;">有效期剩余 </span><span id="tim317" style="font-size:22px;color:#c00;font-weight:500;font-family:黑体;">10分00秒</span></div><div style="width:100%;height:7px;BACKGROUND-IMAGE: url(https://jksb.v.zzu.edu.cn/images/split5.png)"></div>
 	<div style="width:100%;min-height:26px;line-height:26px;font-size:18px;color:#00c;font-weight:500;font-family:黑体;BACKGROUND-IMAGE:url(https://jksb.v.zzu.edu.cn/imagesss/sf_shi3.png)">　
 		<span id="goDep">软件学院</span>.<span id="goName">XX</span><br />　
 		<span id="goDoor">北校区大门东门</span>.<span style="background-color:rgb(204,0,204);color:#ff0;font-weight:500">出口</span><br />　
@@ -52,6 +52,10 @@
 			<label>入口:</label>
 			<input type="text" name="entrence" value =主校区大门东门 placeholder="eg:北校区大门东门">
 		</div>
+		<div>
+          <label>通行码:</label>
+          <input type="text" name="number" value =https://Wdbwyy456.github.io/title316_91639.png />
+        </div>
 		<div>
 			<img src="https://s3.bmp.ovh/imgs/2021/10/a708f01753a3de14.jpg" id="image" width="200"  style="text-align:center" >
 		</div>
@@ -120,10 +124,12 @@
 			let a = document.querySelector("input[name='firstname']").value;
 			let b = document.querySelector("input[name='department']").value;
 			let c = document.querySelector("input[name='entrence']").value;
-
+			let numImg = document.querySelector("input[name='number']").value;
+			
 			document.getElementById('goDep').innerText = b;
 			document.getElementById('goName').innerText = a;
 			document.getElementById('goDoor').innerText = c;
+			document.getElementById("num").style.background = "url(" + numImg + ")";
 
 
 		}
